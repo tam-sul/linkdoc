@@ -208,6 +208,14 @@ nav a:hover{color:var(--emerald)}
 .growth .line{fill:none; stroke:var(--emerald); stroke-width:2.5; stroke-linecap:round; stroke-linejoin:round}
 .growth .pt{fill:var(--emerald)}
 .growth text{font-family:var(--mono); font-size:9px; fill:var(--muted)}
+.actions{border-top:1px solid var(--line); padding:18px 24px 22px; background:var(--surface)}
+.ahead{font-family:var(--mono); font-size:.68rem; letter-spacing:.14em; text-transform:uppercase; color:var(--brand-blue); margin-bottom:12px}
+.arow{display:flex; gap:12px; align-items:flex-start; padding:9px 0; border-bottom:1px solid var(--line)}
+.arow:last-child{border-bottom:0}
+.arow div{flex:1}
+.arow b{display:block; color:var(--ink); font-size:.92rem; font-weight:600}
+.arow span:not(.chip){font-size:.83rem; color:var(--muted)}
+.arow em{font-style:normal; font-family:var(--mono); font-size:.75rem; color:var(--body); text-align:right; white-space:nowrap; line-height:1.5}
 
 /* ============================== calculator band ============================== */
 .band{background:var(--band); color:var(--band-ink); padding:clamp(64px,9vw,110px) 0; position:relative; overflow:hidden}
@@ -431,7 +439,7 @@ footer h2{color:var(--band-ink)}
       <div><div class="k">70+</div><div class="v">health parameters checked, per student, every year</div></div>
       <div><div class="k">7</div><div class="v">assessment areas &mdash; physical, ENT, dental, eye, skin, growth, wellbeing</div></div>
       <div><div class="k">72<span style="font-size:1rem">h</span></div><div class="v">until every parent has their child's report</div></div>
-      <div><div class="k">0</div><div class="v">uncovered days &mdash; absent nurses are replaced same day</div></div>
+      <div><div class="k">0</div><div class="v">uncovered days &mdash; an absent nurse is replaced the same day</div></div>
     </div>
   </div>
 </section>
@@ -439,17 +447,25 @@ footer h2{color:var(--band-ink)}
 <!-- ============================ problem ============================ -->
 <section class="sec surface" id="problem">
   <div class="wrap">
-    <p class="eyebrow rv">The gap</p>
-    <h2 class="rv">When a child gets sick at school today, what actually happens?</h2>
-    <p class="lede rv" style="margin-top:20px">Most schools handle health as a set of problems nobody owns. That works until the day it doesn't.</p>
+    <p class="eyebrow rv">Why it matters</p>
+    <h2 class="rv">Some children are not struggling. They cannot see the board.</h2>
+    <p class="lede rv" style="margin-top:20px">A child who cannot see, cannot hear, is in pain or is not sleeping does not learn &mdash; whatever the timetable says. Without screening, none of it is ever found, and the child is quietly marked down as a slow learner.</p>
+
     <div class="grid3" style="margin-top:44px">
-      <div class="card rv"><h3>A teacher improvises</h3><p style="margin-top:10px;font-size:.95rem">Someone with no clinical training makes a judgement call about a child who is unwell, then phones a parent and hopes.</p></div>
-      <div class="card rv"><h3>The first-aid box is empty</h3><p style="margin-top:10px;font-size:.95rem">Nobody owns restocking it. Nobody is quite sure what should be in it, or who checks the expiry dates.</p></div>
-      <div class="card rv"><h3>Nobody knows who is asthmatic</h3><p style="margin-top:10px;font-size:.95rem">There is no record of which children have asthma, epilepsy, diabetes or a severe allergy &mdash; until an emergency reveals it.</p></div>
+      <div class="card rv"><h3>Vision and hearing</h3><p style="margin-top:10px;font-size:.95rem">The two most common undetected barriers to learning, and the two most easily corrected. A pair of glasses can change a child&rsquo;s entire school record.</p></div>
+      <div class="card rv"><h3>Pain and sleep</h3><p style="margin-top:10px;font-size:.95rem">Untreated dental pain and short sleep both destroy concentration. Neither shows up in a mark book, and neither gets mentioned by the child.</p></div>
+      <div class="card rv"><h3>Chronic illness and absence</h3><p style="margin-top:10px;font-size:.95rem">Uncontrolled asthma means repeated absence. The school sees an attendance problem. The cause is a health problem nobody has managed.</p></div>
     </div>
-    <p class="lede rv" style="margin-top:40px;font-family:var(--display);font-size:1.35rem;color:var(--ink)">
-      And the quieter problem: a child who cannot see the board is not a slow learner. Without screening, nobody ever finds out.
-    </p>
+
+    <div class="rv" style="margin-top:40px;padding:28px 30px;border-radius:var(--r);background:var(--raised);border:1px solid var(--line);border-left:3px solid var(--emerald)">
+      <h3 style="font-family:var(--display);font-size:1.35rem">LinkDoc does not diagnose learning difficulties. It finds the health problems that look like them.</h3>
+      <p style="margin-top:12px;font-size:.97rem">We screen every student, connect the findings to what teachers observe, and tell you where a health issue may be getting in the way of learning &mdash; so it can be checked properly. Never a conclusion about a child. Always a reason to look closer.</p>
+    </div>
+
+    <div class="rv" style="margin-top:48px">
+      <h3 style="font-family:var(--display);font-size:1.5rem">And then there is the day something goes wrong.</h3>
+      <p class="lede" style="margin-top:14px;font-size:1.05rem">Most schools handle health as a set of problems nobody owns: a teacher improvises, the first-aid box is half empty, and no one has a record of which child is asthmatic &mdash; until an emergency reveals it.</p>
+    </div>
   </div>
 </section>
 
@@ -457,7 +473,7 @@ footer h2{color:var(--band-ink)}
 <section class="sec" id="what">
   <div class="wrap">
     <p class="eyebrow rv">What we install</p>
-    <h2 class="rv">Seven things we take off your desk</h2>
+    <h2 class="rv">Eight things we take off your desk</h2>
     <p class="lede rv" style="margin-top:20px">Select any one to see how it works.</p>
     <div class="pillars" id="pillars"></div>
   </div>
@@ -471,7 +487,8 @@ footer h2{color:var(--band-ink)}
         <p class="eyebrow rv">What the parent receives</p>
         <h2 class="rv">A real report, not a tick in a register</h2>
         <p class="lede rv" style="margin-top:20px">Every student is assessed across seven areas and more than seventy parameters. Within 72 hours their parent receives a digital report &mdash; colour-coded so they know instantly whether to do nothing, keep an eye, or see a clinician.</p>
-        <p class="rv" style="margin-top:22px;font-size:.95rem">Findings flow into the student's record, so next year's assessment is a comparison, not a fresh start. Growth is tracked against WHO standards from the first visit.</p>
+        <p class="rv" style="margin-top:22px;font-size:.95rem">Findings flow into the student&rsquo;s record, so next year&rsquo;s assessment is a comparison, not a fresh start. Growth is tracked against WHO standards from the first visit.</p>
+        <p class="rv" style="margin-top:16px;font-size:.95rem"><strong style="color:var(--ink)">Every finding gets a name and a date against it</strong> &mdash; who is doing something about it, and by when. We then follow it until it is closed. A screening that ends with a report is a leaflet; a screening that ends with a treated child is a health service.</p>
         <div class="rv" style="margin-top:26px;display:flex;gap:10px;flex-wrap:wrap">
           <span class="chip ok">Normal</span><span class="chip watch">Monitor</span><span class="chip act">See a clinician</span>
         </div>
@@ -487,6 +504,12 @@ footer h2{color:var(--band-ink)}
         </div>
         <div class="tabs" role="tablist" aria-label="Assessment areas" id="tabs"></div>
         <div id="panels"></div>
+        <div class="actions">
+          <div class="ahead">What happens next</div>
+          <div class="arow"><span class="chip act">Action</span><div><b>Vision, left eye 6/12</b><span>See an optometrist &mdash; glasses likely</span></div><em>Parent<br>3 weeks</em></div>
+          <div class="arow"><span class="chip act">Action</span><div><b>Dental decay, 2 teeth</b><span>Treat before it causes pain or absence</span></div><em>Parent<br>4 weeks</em></div>
+          <div class="arow"><span class="chip watch">Monitor</span><div><b>Right ear wax occlusion</b><span>Nurse re-checks at next visit</span></div><em>LinkDoc<br>Next term</em></div>
+        </div>
       </div>
     </div>
   </div>
@@ -660,10 +683,11 @@ const PILLARS = [
   ["staff","Medical staff","Staffing","A qualified nurse deployed to your school &mdash; and if they are ever absent, a replacement arrives the same day. On higher levels a doctor visits weekly or twice weekly."],
   ["centre","The health centre","Clinic safety","We design, build out, brand and equip your clinic room to a proper clinical standard &mdash; or transform the infirmary you already have."],
   ["supplies","Medical supplies","Clinic safety","Consumables, medicines and first-aid stock refilled on a monthly schedule. You never discover the cupboard is empty during an emergency."],
-  ["assess","Health assessment","Assessment","Every student examined across five areas and 70+ parameters, once or twice a year, with a digital report to every parent inside 72 hours."],
+  ["assess","Health assessment","Assessment","Every student examined across seven areas and 70+ parameters, once or twice a year, with a digital report to every parent inside 72 hours."],
   ["mind","Mental health","Wellbeing","A qualified counsellor on campus for students, with separate sessions for teachers and for parents. Referral to psychiatric support where it is needed."],
   ["educate","Health education","Education","A student-led wellness club with a theme each quarter &mdash; nutrition, mental health, hygiene, physical wellness &mdash; plus workshops written separately for students, teachers and parents."],
-  ["vaccine","In-school vaccination","Prevention","We schedule the campaign, handle every parental consent, bring the team and the cold chain, and vaccinate on site &mdash; students and their family members."]
+  ["vaccine","In-school vaccination","Prevention","We schedule the campaign, handle every parental consent, bring the team and the cold chain, and vaccinate on site &mdash; students and their family members."],
+  ["assess","Referral and follow-up","Follow-through","When a child needs more than the school can give, we refer into the PSI Ethiopia clinic and laboratory network &mdash; and then we follow it up until we know the child was actually seen. Not a note home. A closed loop."]
 ];
 document.getElementById("pillars").innerHTML = PILLARS.map(([ic,t,tag,d],i)=>`
   <button class="pillar rv" aria-expanded="${i===0}">

@@ -208,6 +208,14 @@ nav a:hover{color:var(--emerald)}
 .growth .line{fill:none; stroke:var(--emerald); stroke-width:2.5; stroke-linecap:round; stroke-linejoin:round}
 .growth .pt{fill:var(--emerald)}
 .growth text{font-family:var(--mono); font-size:9px; fill:var(--muted)}
+.actions{border-top:1px solid var(--line); padding:18px 24px 22px; background:var(--surface)}
+.ahead{font-family:var(--mono); font-size:.68rem; letter-spacing:.14em; text-transform:uppercase; color:var(--brand-blue); margin-bottom:12px}
+.arow{display:flex; gap:12px; align-items:flex-start; padding:9px 0; border-bottom:1px solid var(--line)}
+.arow:last-child{border-bottom:0}
+.arow div{flex:1}
+.arow b{display:block; color:var(--ink); font-size:.92rem; font-weight:600}
+.arow span:not(.chip){font-size:.83rem; color:var(--muted)}
+.arow em{font-style:normal; font-family:var(--mono); font-size:.75rem; color:var(--body); text-align:right; white-space:nowrap; line-height:1.5}
 
 /* ============================== calculator band ============================== */
 .band{background:var(--band); color:var(--band-ink); padding:clamp(64px,9vw,110px) 0; position:relative; overflow:hidden}
@@ -387,7 +395,7 @@ footer h2{color:var(--band-ink)}
     <nav>
       <a class="hide" href="index.html">For schools</a>
       <a class="hide" href="#tiers">Plans</a>
-      <a class="hide" href="#app">The app</a>
+      <a class="hide" href="#app">The record</a>
       <a class="btn" href="#start">Start</a>
     </nav>
   </div>
@@ -423,6 +431,7 @@ footer h2{color:var(--band-ink)}
     <p class="eyebrow rv">Why families join</p>
     <h2 class="rv">The check-up finds it. Someone has to do something about it.</h2>
     <p class="lede rv" style="margin-top:20px">A school assessment tells you your child needs glasses, or has two teeth with decay, or is falling off their growth curve. Then the report ends and you are on your own &mdash; finding a clinic, taking a day off work, queueing, explaining the history again.</p>
+    <p class="rv" style="margin-top:16px;font-size:.97rem">Every finding in your child&rsquo;s school report carries a name and a date &mdash; who is doing something about it, and by when. A family plan means that name is <strong style="color:var(--ink)">ours</strong>, not yours.</p>
     <div class="grid3" style="margin-top:44px">
       <div class="card rv"><h3>The same team, every time</h3><p style="margin-top:10px;font-size:.95rem">You are assigned a nurse and a doctor who know your family. No queue, no starting the story again, no stranger reading a file for the first time.</p></div>
       <div class="card rv"><h3>They come to you</h3><p style="margin-top:10px;font-size:.95rem">Scheduled home visits for check-ups, vitals, growth measurement and immunisation &mdash; without taking a day off work or sitting in a waiting room with a sick child.</p></div>
@@ -434,15 +443,16 @@ footer h2{color:var(--band-ink)}
 <section class="sec" id="app">
   <div class="wrap report-wrap">
     <div>
-      <p class="eyebrow rv">The app</p>
+      <p class="eyebrow rv">Your child&rsquo;s record</p>
       <h2 class="rv">Everything about your child's health, in your pocket</h2>
-      <p class="lede rv" style="margin-top:20px">Built for parents, not for doctors. Open it to see where your child sits on the growth curve, what vaccine is due next, and what the nurse wrote after the last visit.</p>
+      <p class="lede rv" style="margin-top:20px">Every measurement, every visit and every vaccine in one place &mdash; sent to your phone. Where your child sits on the growth curve, what vaccine is due next, and what the nurse wrote after the last visit.</p>
+      <p class="rv" style="margin-top:14px;font-size:.95rem">It reaches you on <strong style="color:var(--ink)">WhatsApp or as a link by SMS</strong>. There is nothing to install, and it works on any phone.</p>
       <ul class="ticks rv">
         <li>Growth tracked against WHO standards, from the first visit</li>
-        <li>The full Ethiopian immunisation schedule, with reminders before each dose</li>
-        <li>Every visit note and measurement, kept in one record</li>
-        <li>Chat with your assigned nurse &mdash; answered in minutes, not days</li>
-        <li>Works on WhatsApp too, if you would rather not install anything</li>
+        <li>The full Ethiopian immunisation schedule, with a reminder before each dose</li>
+        <li>Every visit note and measurement kept together, year after year</li>
+        <li>Your assigned nurse on WhatsApp &mdash; answered in minutes, not days</li>
+        <li>Nothing to install, and no smartphone required</li>
       </ul>
     </div>
     <div class="phone rv" aria-hidden="true">
@@ -479,7 +489,7 @@ footer h2{color:var(--band-ink)}
         <ul>
           <li>Unlimited nurse chat, answered in under 30 minutes</li>
           <li>One virtual doctor consultation a month</li>
-          <li>Growth &amp; immunisation tracking for every child</li>
+          <li>Growth and immunisation tracking for every child</li>
           <li>Home visits available at 1,500 birr each</li>
         </ul>
       </article>
@@ -492,7 +502,7 @@ footer h2{color:var(--band-ink)}
           <li>An assigned nurse and general practitioner</li>
           <li><strong>One home visit every month</strong> &mdash; vitals, growth, immunisation</li>
           <li>Unlimited virtual doctor consultations</li>
-          <li>Medication refills ordered in the app</li>
+          <li>Medication refills arranged through your nurse</li>
           <li>Covers up to 3 children plus parents</li>
         </ul>
       </article>
