@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tam-sul.github.io/linkdoc/sitemap.xml

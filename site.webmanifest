@@ -1,0 +1,13 @@
+{
+  "name": "LinkDoc",
+  "short_name": "LinkDoc",
+  "description": "The complete line of care.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#0A5B42",
+  "icons": [
+    {"src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png"}
+  ]
+}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 790" width="900" height="790" role="img" aria-label="LinkDoc — The complete line of care">
+  <title>LinkDoc — The complete line of care</title>
+  <defs><mask id="wl"><rect width="512" height="512" fill="#fff"/><g transform="rotate(-45 256 182.38)"><rect x="227" y="127.28" width="58" height="110.2" fill="#000"/></g></mask></defs>
+  <g transform="translate(194 16) scale(0.98)"><g transform="rotate(-45 192 240)"><rect x="106.0" y="80.0" width="172" height="320" rx="86.0" fill="none" stroke="#0A5B42" stroke-width="58"/></g><g mask="url(#wl)"><g transform="rotate(45 320 240)"><rect x="234.0" y="80.0" width="172" height="320" rx="86.0" fill="none" stroke="#2FBF8B" stroke-width="58"/></g></g></g>
+  <text x="450" y="656" text-anchor="middle" font-family="'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua',Georgia,'Times New Roman',serif" font-size="132"
+        textLength="472" lengthAdjust="spacingAndGlyphs">
+    <tspan fill="#0A3B2C">Link</tspan><tspan fill="#0E8A5F">Doc</tspan></text>
+  <text x="450" y="718" text-anchor="middle" font-family="'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua',Georgia,'Times New Roman',serif" font-size="30"
+        textLength="560" lengthAdjust="spacingAndGlyphs" fill="#15557F">THE COMPLETE LINE OF CARE</text>
+</svg>
