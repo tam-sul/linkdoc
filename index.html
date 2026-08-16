@@ -189,6 +189,7 @@ nav a:hover{color:var(--emerald)}
 .tab:hover{color:var(--ink)}
 .tab[aria-selected="true"]{background:var(--ok-bg); color:var(--emerald); font-weight:600}
 .panel{padding:6px 24px 24px}
+.paneln{font-size:.82rem;color:var(--muted);background:var(--surface);border-radius:10px;padding:11px 13px;margin:12px 0 4px}
 .panel[hidden]{display:none}
 .finding{display:flex; gap:14px; padding:15px 0; border-bottom:1px solid var(--line)}
 .finding:last-child{border-bottom:0}
@@ -428,7 +429,7 @@ footer h2{color:var(--band-ink)}
   <div class="wrap">
     <div class="statstrip rv">
       <div><div class="k">70+</div><div class="v">health parameters checked, per student, every year</div></div>
-      <div><div class="k">5</div><div class="v">assessment areas &mdash; physical, ENT, dental, eye, growth</div></div>
+      <div><div class="k">7</div><div class="v">assessment areas &mdash; physical, ENT, dental, eye, skin, growth, wellbeing</div></div>
       <div><div class="k">72<span style="font-size:1rem">h</span></div><div class="v">until every parent has their child's report</div></div>
       <div><div class="k">0</div><div class="v">uncovered days &mdash; absent nurses are replaced same day</div></div>
     </div>
@@ -469,7 +470,7 @@ footer h2{color:var(--band-ink)}
       <div>
         <p class="eyebrow rv">What the parent receives</p>
         <h2 class="rv">A real report, not a tick in a register</h2>
-        <p class="lede rv" style="margin-top:20px">Every student is assessed across five areas and more than seventy parameters. Within 72 hours their parent receives a digital report &mdash; colour-coded so they know instantly whether to do nothing, keep an eye, or see a clinician.</p>
+        <p class="lede rv" style="margin-top:20px">Every student is assessed across seven areas and more than seventy parameters. Within 72 hours their parent receives a digital report &mdash; colour-coded so they know instantly whether to do nothing, keep an eye, or see a clinician.</p>
         <p class="rv" style="margin-top:22px;font-size:.95rem">Findings flow into the student's record, so next year's assessment is a comparison, not a fresh start. Growth is tracked against WHO standards from the first visit.</p>
         <div class="rv" style="margin-top:26px;display:flex;gap:10px;flex-wrap:wrap">
           <span class="chip ok">Normal</span><span class="chip watch">Monitor</span><span class="chip act">See a clinician</span>
@@ -681,17 +682,17 @@ document.getElementById("pillars").addEventListener("click", e => {
 /* ---------------- sample report ---------------- */
 const AREAS = [
   ["Physical", [
-    ["Heart & circulation","Rate, rhythm, murmurs","72 bpm","ok"],
-    ["Chest & breathing","Air entry, added sounds","Clear","ok"],
+    ["Heart &amp; circulation","Rate, rhythm, murmurs","72 bpm","ok"],
+    ["Chest &amp; breathing","Air entry, added sounds","Clear","ok"],
     ["Abdomen","Tenderness, organ size","Normal","ok"],
-    ["Spine & posture","Curvature, symmetry","Normal","ok"],
-    ["Skin","Rashes, infection, scarring","Normal","ok"]
+    ["Spine &amp; posture","Curvature, symmetry","Normal","ok"],
+    ["Exercise tolerance","Breathlessness, limitation","Normal","ok"]
   ]],
   ["ENT", [
     ["Left ear","Canal and drum","Clear","ok"],
     ["Right ear","Canal and drum","Wax occlusion","watch"],
     ["Hearing screen","Response both ears","Passed","ok"],
-    ["Throat & tonsils","Size, inflammation","Normal","ok"],
+    ["Throat &amp; tonsils","Size, inflammation","Normal","ok"],
     ["Nose","Airway, discharge","Normal","ok"]
   ]],
   ["Dental", [
@@ -707,11 +708,25 @@ const AREAS = [
     ["Squint","Alignment","None","ok"],
     ["External eye","Lids, conjunctiva","Normal","ok"]
   ]],
+  ["Skin", [
+    ["Eczema / dermatitis","Chronic skin inflammation","None","ok"],
+    ["Fungal infection","Scalp, body, feet","None","ok"],
+    ["Contagious conditions","Scabies, impetigo","None","ok"],
+    ["Allergic skin reaction","Urticaria, known triggers","None","ok"],
+    ["Wounds &amp; scarring","Healing, infection risk","Normal","ok"]
+  ]],
   ["Growth", [
     ["Height","Against WHO standard","132 cm","ok"],
     ["Weight","Against WHO standard","28.4 kg","ok"],
     ["BMI","Body mass index","16.3","ok"],
     ["Percentile","Height for age","55th","ok"]
+  ]],
+  ["Wellbeing", [
+    ["Emotional wellbeing","Screening questionnaire","No concern","ok"],
+    ["Sleep","Duration and quality","Short for age","watch"],
+    ["School adjustment","Settling, participation","Settled","ok"],
+    ["Peer relationships","Including bullying concerns","No concern","ok"],
+    ["Concentration","Reported attention in class","No concern","ok"]
   ]]
 ];
 const GROWTH = [[6,42],[6.5,45],[7,48],[7.5,50],[8,52],[8.5,54],[9,55]];
@@ -739,6 +754,7 @@ document.getElementById("panels").innerHTML = AREAS.map(([n,rows],i)=>{
   const label={ok:"Normal",watch:"Monitor",act:"See a clinician"};
   return `<div class="panel" id="p${i}" role="tabpanel" aria-labelledby="t${i}" ${i?"hidden":""}>
     ${n==="Growth"?growthChart():""}
+    ${n==="Wellbeing"?'<p class="paneln">A wellbeing screen, not a diagnosis. Anything flagged here is referred to a qualified counsellor &mdash; never labelled by the nurse.</p>':""}
     ${rows.map(([a,b,v,s])=>`<div class="finding">
       <div class="lab"><b>${a}</b><span>${b}</span></div>
       <div class="val">${v}</div>
